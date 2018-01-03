@@ -67,7 +67,6 @@ class UserTest < Minitest::Test
 
     assert_equal [joke_1, joke_2], josh.jokes
     assert_equal 2, josh.jokes.count
-
   end
-  
+
 end
