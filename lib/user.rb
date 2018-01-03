@@ -26,8 +26,10 @@ class User
   end
 
   def learn_routine(file)
-    jokes = CSV.open file, headers: true, header_converters: :symbol
-    require 'pry'; binding.pry
+    data = CSV.open file, headers: true, header_converters: :symbol
+    data.each do |joke|
+      jokes << Joke.new(joke)
+    end
   end
 
 end

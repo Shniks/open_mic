@@ -4,10 +4,10 @@ class Joke
                :question,
                :answer
 
-  def initialize (id:, question:, answer:)
-    @id = id
-    @question = question
-    @answer = answer
+  def initialize (joke)
+    @id = joke[:id]
+    @question = joke[:question]
+    @answer = joke[:answer]
   end
 
 end
