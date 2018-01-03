@@ -1,3 +1,4 @@
+require 'csv'
 require './lib/joke'
 
 class User
@@ -22,6 +23,11 @@ class User
       jokes.each do |joke|
         user.learn(joke)
       end
+  end
+
+  def learn_routine(file)
+    jokes = CSV.open file, headers: true, header_converters: :symbol
+    require 'pry'; binding.pry
   end
 
 end
